@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+    .grid {
+		  overflow: hidden;
+		  height: 130px;
+		}
+		.grid .grid-table th, .grid .grid-table td {
+		  text-align: left;
+		}
+    </style>
+  </head>
+  <body>
+    <div>
+	    <div id="id-gridwrap" class="grid">
+	      <table class="grid-table" border="1" cellspacing="0" cellpadding="0" style="width: 100%;">
+	        <thead>
+	          <tr>
+	            <th>1..</th>
+	            <th>2..</th>
+	            <th>3..</th>
+	          </tr>
+	        </thead>
+	        <tbody>
+	          <tr>
+	            <td>1</td>
+	            <td>2</td>
+	            <td>3</td>
+	          </tr>
+	          <tr>
+	            <td>1</td>
+	            <td>2</td>
+	            <td>3</td>
+	          </tr>
+	          <tr>
+	            <td>1</td>
+	            <td>2</td>
+	            <td>3</td>
+	          </tr>
+	          <tr>
+	            <td>1</td>
+	            <td>2</td>
+	            <td>3</td>
+	          </tr>
+	          <tr>
+	            <td>1</td>
+	            <td>2</td>
+	            <td>3</td>
+	          </tr>
+	          <tr>
+	            <td>1</td>
+	            <td>2</td>
+	            <td>3</td>
+	          </tr>
+	          <tr>
+	            <td>1</td>
+	            <td>2</td>
+	            <td>3</td>
+	          </tr>
+	          <tr>
+	            <td>1</td>
+	            <td>2</td>
+	            <td>3</td>
+	          </tr>
+	          <tr>
+	            <td>1</td>
+	            <td>2</td>
+	            <td>3</td>
+	          </tr>
+	          <tr>
+	            <td>1</td>
+	            <td>2</td>
+	            <td>3</td>
+	          </tr>
+	          <tr>
+	            <td>1</td>
+	            <td>2</td>
+	            <td>3</td>
+	          </tr>
+	          <tr>
+	            <td>1</td>
+	            <td>2</td>
+	            <td>3</td>
+	          </tr>
+	          <tr>
+	            <td>1</td>
+	            <td>2</td>
+	            <td>3</td>
+	          </tr>
+	          <tr>
+	            <td>1</td>
+	            <td>2</td>
+	            <td>3</td>
+	          </tr>
+	          <tr>
+	            <td>1</td>
+	            <td>2</td>
+	            <td>3</td>
+	          </tr>
+	          <tr>
+	            <td>1</td>
+	            <td>2</td>
+	            <td>3</td>
+	          </tr>
+	          <tr>
+	            <td>1</td>
+	            <td>2</td>
+	            <td>3</td>
+	          </tr>
+	          <tr>
+	            <td>1</td>
+	            <td>2</td>
+	            <td>3</td>
+	          </tr>
+	          <tr>
+	            <td>1</td>
+	            <td>2</td>
+	            <td>3</td>
+	          </tr>
+	          <tr>
+	            <td>1</td>
+	            <td>2</td>
+	            <td>3</td>
+	          </tr>
+	          <tr>
+	            <td>1</td>
+	            <td>2</td>
+	            <td>3</td>
+	          </tr>
+	          <tr>
+	            <td>1</td>
+	            <td>2</td>
+	            <td>3</td>
+	          </tr>
+	          <tr>
+	            <td>1</td>
+	            <td>2</td>
+	            <td>3</td>
+	          </tr>
+	          <tr>
+	            <td>1</td>
+	            <td>2</td>
+	            <td>3</td>
+	          </tr>
+	        </tbody>
+	      </table>
+	    </div>
+	  </div>
+    <script type="text/javascript">
+      var scroll = {
+     		init: function(gridwrap) {
+     	  	var self = this;
+     	  	if(self.setInterval) {
+     	  		clearTimeout(self.setInterval);
+     	  	} else {
+     	  		self.isMove = true;
+     	  		gridwrap.onmouseover = function() {
+     	  			self.isMove = false;
+     			  }
+     	  		gridwrap.onmouseout = function() {
+     	  			self.isMove = true
+     			  }
+     	  		self.scoll_fn = function() {
+     	  			if(!self.isMove) {
+     	  	  		return;
+     	  	  	}
+     	  	  	if(gridwrap.scrollHeight == gridwrap.scrollTop + gridwrap.offsetHeight) {
+     	  	  		gridwrap.scrollTop = 0;
+     	  			} else {
+     	  				gridwrap.scrollTop += 1;
+     	  			}
+     	  		}
+     	  	}
+     	  	self.setInterval = setInterval(self.scoll_fn, 100);
+     		}  		
+      };
+      scroll.init(document.getElementById('id-gridwrap'));
+    </script>
+  </body>
+</html>
