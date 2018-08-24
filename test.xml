@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><checkstyle version="4.3"><file name="F:\test\scroll\test.js"><error line="4" column="1" severity="error" message="Unexpected console statement. (no-console)" source="eslint.rules.no-console" /><error line="5" column="1" severity="error" message="Unexpected alert. (no-alert)" source="eslint.rules.no-alert" /></file></checkstyle>
